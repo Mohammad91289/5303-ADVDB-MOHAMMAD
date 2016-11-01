@@ -1,0 +1,122 @@
+http://blog.couchbase.com/2016/january/the-value-of-schema-less-databases
+
+Schema free explained.
+
+http://searchenterpriselinux.techtarget.com/definition/open-source
+Open source
+
+
+
+
+
+
+Map Reduce
+
+https://www.youtube.com/watch?v=8wjvMyc01QY
+******************************************************************
+file attachment..!!
+
+
+{
+   "_id": "260126e0e23156d011c5bddb1b068bb8",
+   "_rev": "3-d3e3bfd900566ed2182733453b71c7b0",
+   "a": 3,
+   "_attachments": {
+       "mp1.png": {
+           "content_type": "image/png",
+           "revpos": 2,
+           "digest": "md5-26QuV4oiXNQSgmDQtjrXwg==",
+           "length": 280606,
+           "stub": true
+       }
+   }
+}
+
+
+
+function(doc) {
+    var shop, price, key;
+    if (doc.item && doc.prices) {
+        for (shop in doc.prices) {
+            price = doc.prices[shop];
+            key = [doc.item, price];
+            emit(shop, key);
+        }
+    }
+}
+
+
+https://www.tutorialspoint.com/couchdb/couchdb_attaching_files.htm
+
+******************************************************************
+Grocery...!!!!!
+
+   "item": "apple",
+   "prices": {
+       "Fresh Mart": 1.99,
+       "Wallmart": 3.19,
+       "Cash Saver": 1.09
+   }
+
+
+   "item": "kiwi",
+   "prices": {
+       "Fresh Mart": 1.45,
+       "Wallmart": 3.19,
+       "Cash Saver": 1.99
+   }
+
+   "item": "orange",
+   "prices": {
+       "Fresh Mart": 1.69,
+       "Wallmart": 2.59,
+       "Cash Saver": 1.99
+   }
+
+******************************************************************
+
+
+create documents with 
+
+id
+make
+model
+year
+available
+
+
+function(doc) {
+emit (doc.make, doc.available);
+}
+
+function ()
+
+then 
+
+
+
+{
+   "_id": "260126e0e23156d011c5bddb1b06d8ba",
+   "_rev": "1-aacf6c702718836898d516d8242d83ff",
+   "id": 1,
+   "make": "Audi",
+   "model": "A3",
+   "year": 2000,
+   "price": 5400
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
